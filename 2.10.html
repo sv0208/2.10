@@ -1,0 +1,56 @@
+
+<html>
+    <head>
+      <link rel="stylesheet" href="Chart.css">
+        <script type="text/javascript" src="jquery-3.5.1.js"></script>
+      <script src="Chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+   
+
+     
+    </head>
+    <body>
+      <canvas id="myChart"></canvas>
+      <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+   var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+   var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+				datasets: [{
+					data: [3.3,13.2,7.4,8.3,12.8,5.1,10,15.8,4.4,19.2],
+					backgroundColor: [
+						'red',
+						'orange',
+						'yellow',
+						'green',
+            'lightblue',
+						'blue',
+            'purple',
+            'pink',
+            'black',
+            'grey'
+					],
+					label: 'Colors'
+				}],
+				labels: [
+        'red',
+						'orange',
+						'yellow',
+						'green',
+            'lightblue',
+						'blue',
+            'purple',
+            'pink',
+            'black',
+            'grey'
+				]
+			},
+    options: {}
+});
+   
+           </script>
+    </body>
+</html>
